@@ -1,4 +1,11 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo pre-commit 
+NORMAL='\033[0m'
+BLUE='\033[0;34m'
+IGREEN='\033[0;92m'
+IRED='\033[0;91m'
+
+echo -e "\n${BLUE}husky pre-commit을 실행합니다.${NORMAL}\n"
+echo -e "\n${BLUE}--yet nothing to do--${NORMAL}\n"
+echo -e "\n${BLUE}husky pre-commit을 종료합니다.${NORMAL}\n"
