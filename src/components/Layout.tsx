@@ -25,6 +25,9 @@ const Layout = ({ pageTitle, children }: { pageTitle: string; children: React.Re
           <li>
             <Link to="/About">About</Link>
           </li>
+          <li>
+            <Link to="/Blog">Blog</Link>
+          </li>
         </ul>
       </nav>
       <main>
