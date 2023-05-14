@@ -20,6 +20,7 @@ const config: GatsbyConfig = {
         path: `${__dirname}/posts`,
       },
     },
+    'gatsby-plugin-mdx',
   ],
 };
 
