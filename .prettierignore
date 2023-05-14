@@ -1,0 +1,10 @@
+/*
+/node_modules
+/public
+
+!/src/
+!/src/**
+!/tsconfig.json
+!/gatsby-config.ts
+
+/src/images/
