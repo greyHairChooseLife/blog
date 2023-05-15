@@ -4,15 +4,17 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 
 const BlogPage = ({ data }: PageProps<Queries.BlogPageQuery>) => {
-  const posts = data.allFile.nodes;
+  const posts = data.allMdx.nodes;
 
   return (
     <Layout pageTitle="My Blog Posts">
-      <ul>
-        {posts.map(({ name: fileName }) => (
-          <li key={fileName}>{fileName}</li>
-        ))}
-      </ul>
+      {posts.map((post) => (
+        <article key={post.id}>
+          <h2>{post.frontmatter?.title}</h2>
+          <p>{post.frontmatter?.date}</p>
+          <p>{post.excerpt}</p>
+        </article>
+      ))}
     </Layout>
   );
 };
@@ -23,9 +25,22 @@ export default BlogPage;
 
 export const query = graphql`
   query BlogPage {
-    allFile {
+    allMdx(sort: { frontmatter: { date: DESC } }) {
       nodes {
-        name
+        frontmatter {
+          date(formatString: "MMMM D, YYYY")
+          title
+        }
+        id
+        excerpt
+        parent {
+          ... on File {
+            id
+            name
+            modifiedTime(formatString: "MMMM D, YYYY")
+            birthTime(formatString: "MMMM D, YYYY")
+          }
+        }
       }
     }
   }
