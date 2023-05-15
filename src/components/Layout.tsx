@@ -23,10 +23,10 @@ const Layout = ({ pageTitle, children }: { pageTitle: string; children: React.Re
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/About">About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/Blog">Blog</Link>
+            <Link to="/blog/">Blog</Link>
           </li>
         </ul>
       </nav>

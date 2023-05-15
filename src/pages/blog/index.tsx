@@ -1,18 +1,17 @@
 import * as React from 'react';
-import { graphql, PageProps } from 'gatsby';
-import Layout from '../components/Layout';
-import Seo from '../components/Seo';
+import { graphql, PageProps, Link } from 'gatsby';
+import Layout from '../../components/Layout';
+import Seo from '../../components/Seo';
 
-const BlogPage = ({ data }: PageProps<Queries.BlogPageQuery>) => {
+const BlogIndex = ({ data }: PageProps<Queries.BlogIndexQuery>) => {
   const posts = data.allMdx.nodes;
 
   return (
     <Layout pageTitle="My Blog Posts">
       {posts.map((post) => (
         <article key={post.id}>
-          <h2>{post.frontmatter?.title}</h2>
+          <Link to={`/blog/${post?.frontmatter?.slug}`}>{post?.frontmatter?.title}</Link>
           <p>{post.frontmatter?.date}</p>
-          <p>{post.excerpt}</p>
         </article>
       ))}
     </Layout>
@@ -21,15 +20,16 @@ const BlogPage = ({ data }: PageProps<Queries.BlogPageQuery>) => {
 
 export const Head = () => <Seo title="My Blog Posts" />;
 
-export default BlogPage;
+export default BlogIndex;
 
 export const query = graphql`
-  query BlogPage {
+  query BlogIndex {
     allMdx(sort: { frontmatter: { date: DESC } }) {
       nodes {
         frontmatter {
           date(formatString: "MMMM D, YYYY")
           title
+          slug
         }
         id
         excerpt
