@@ -9,7 +9,16 @@ const config: GatsbyConfig = {
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
-  plugins: ['gatsby-plugin-dts-css-modules'],
+  plugins: [
+    'gatsby-plugin-dts-css-modules',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `write`,
+        path: `${__dirname}/write`,
+      },
+    },
+  ],
 };
 
 //'gatsby-plugin-css-modules-typings',
