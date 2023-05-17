@@ -1,49 +1,29 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+## main 브랜치의 용도
 
-## 🚀 Quick start
+bolier plate. 다음에도 블로그 따위를 만들 때 사용할 뼈대다. 그러니까 main이 배포 되지는 않는다.
 
-1.  **Create a Gatsby site.**
+## 각 브랜치별 용도
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+| branch name | 용도         | history 관리                          |
+| :---------: | :----------- | :------------------------------------ |
+|    main     | boiler plate | O                                     |
+|     dev     | 기능 개발    | O                                     |
+|    post     | 포스트 작성  | X, posting commit에 계속 --amend한다. |
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+## `post branch`에서 진행
 
-2.  **Start developing.**
+node script를 통해 gh-pages 패키지를 실행한다.
 
-    Navigate into your new site’s directory and start it up.
+`"deploy": "git checkout post && gatsby build && gh-pages -f -d public -b deploy"`
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## 블로그 포스팅 작업 순서
 
-3.  **Open the code and start customizing!**
+1. `post branch`에서 글 작성
+2. `git commit --amend`, last commit은 반드시 post만 담고 있다.
+3. `post branch`에서 배포
 
-    Your site is now running at http://localhost:8000!
+## 블로그 기능 업데이트의 작업 순서
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+1. `dev branch`에서 기능 개발
+2. `post branch`에서 rebase dev
+3. `post branch`에서 배포
