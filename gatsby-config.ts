@@ -18,6 +18,7 @@ const config: GatsbyConfig = {
         path: `${__dirname}/write`,
       },
     },
+    `gatsby-transformer-remark`,
   ],
 };
 
