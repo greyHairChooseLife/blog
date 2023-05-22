@@ -1,0 +1,9 @@
+.layout {
+  width: 90vw;
+  margin: auto;
+}
+
+.layout > h1 {
+  text-align: center;
+  margin: 6vh;
+}
