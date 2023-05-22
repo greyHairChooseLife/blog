@@ -1,0 +1,15 @@
+.link_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50vw;
+  margin: auto;
+  font-size: 1.2rem;
+}
+
+.link_list > a {
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
