@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useHeaderData } from '../lib/hooks/useHeaderData';
 import Layout from '../components/layout/layout';
+import Contact from '../components/for_pages/home/contact';
 import * as st from './index.module.css';
 
 const Home = () => {
@@ -8,7 +9,7 @@ const Home = () => {
     <Layout>
       <div className={st.layout}>
         <div>resume</div>
-        <div>contact</div>
+        <Contact />
       </div>
     </Layout>
   );
