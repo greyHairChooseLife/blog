@@ -1,7 +1,12 @@
 import * as React from 'react';
+import Layout from '../../components/layout/layout';
 
 const Posts = () => {
-  return <div>posts</div>;
+  return (
+    <Layout>
+      <div>posts</div>
+    </Layout>
+  );
 };
 
 export default Posts;
