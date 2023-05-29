@@ -28,6 +28,7 @@
 #   build    : build system
 #   ci       : continuous integration 
 #   docs     : 문서 작업
+#   write    : root/write/ 내에서 글 쓰기 작업
 #   test     : test
 #   etc      : 다른 prefix가 적합하지 않은 경우
 #
