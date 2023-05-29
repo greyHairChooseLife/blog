@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   gap: 3vh;
+  padding-bottom: 10vh;
 }
 
 .cardList > a {
