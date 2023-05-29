@@ -14,8 +14,8 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `write`,
-        path: `${__dirname}/write`,
+        name: `posts`,
+        path: `${__dirname}/write/posts`,
       },
     },
     `gatsby-transformer-remark`,
