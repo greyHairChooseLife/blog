@@ -22,6 +22,18 @@
   margin-left: 15px;
 }
 
+.toc {
+  position: fixed;
+  right: 1vw;
+  top: 25vh;
+  background-color: #f5f5dc;
+  padding: 20px 20px 20px 0;
+}
+
+.toc li ul {
+  padding-left: 20px;
+}
+
 /*
  * github like style
  * https://github.com/iamcco/markdown.css/blob/master/dest/github/markdown.css

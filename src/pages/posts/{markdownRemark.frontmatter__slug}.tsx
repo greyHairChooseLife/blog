@@ -4,7 +4,7 @@ import Layout from '../../components/layout/layout';
 import * as st from './template.module.css';
 
 export default function PostTemplate({ data }: PageProps<Queries.PostTemplateQuery>) {
-  const { frontmatter, html } = data.markdownRemark || {};
+  const { frontmatter, html, tableOfContents } = data.markdownRemark || {};
 
   return (
     <Layout>
@@ -20,6 +20,12 @@ export default function PostTemplate({ data }: PageProps<Queries.PostTemplateQue
           className={st.markdownBody}
           dangerouslySetInnerHTML={{ __html: html || '내용을 읽을 수 없습니다.' }}
         />
+        <div
+          className={st.toc}
+          dangerouslySetInnerHTML={{
+            __html: tableOfContents || 'tableOfContents를 읽을 수 없습니다.',
+          }}
+        />
       </div>
     </Layout>
   );
@@ -34,6 +40,7 @@ export const query = graphql`
         birth(formatString: "YYYY/MM/DD")
         modified(fromNow: true)
       }
+      tableOfContents
     }
   }
 `;
