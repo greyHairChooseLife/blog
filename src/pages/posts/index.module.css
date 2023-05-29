@@ -5,31 +5,9 @@
   gap: 3vh;
 }
 
-.cardList > button {
-  text-align: center;
-  width: 80%;
+.cardList > a {
+  width: 70%;
   max-width: 1300px;
-  padding: 2vh;
-  text-align: start;
-  cursor: pointer;
-}
-
-.cardList h2 {
-  margin-bottom: 15px;
-  font-size: 2rem;
-}
-
-.cardList > button > div > p {
-  font-style: italic;
-  font-size: 1.2rem;
-  color: grey;
-}
-.cardList > button > div > p > span {
-  display: inline-block;
-  width: 5%;
-}
-
-.cardList article {
-  padding: 2%;
-  font-size: 1.2rem;
+  margin: auto;
+  text-decoration: none;
 }

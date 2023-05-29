@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as st from './postCard.module.css';
 
 interface postProps {
   excerpt: string | null;
@@ -12,7 +13,7 @@ interface postProps {
 
 const PostCard = ({ post }: { post: postProps }) => {
   return (
-    <div>
+    <div className={st.card}>
       <h2>{post.frontmatter?.title}</h2>
       <p>
         <span>작성</span>

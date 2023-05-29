@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { graphql, PageProps } from 'gatsby';
+import { graphql, PageProps, Link } from 'gatsby';
 import { useHeaderData } from '../../lib/hooks/useHeaderData';
 import Layout from '../../components/layout/layout';
 import PostCard from '../../components/for_pages/posts/postCard';
@@ -12,9 +12,9 @@ export default function Posts({ data }: PageProps<Queries.PostsQuery>) {
     <Layout>
       <div className={st.cardList}>
         {posts.map((post) => (
-          <button key={post.id}>
+          <Link key={post.id} to={post?.frontmatter?.slug || ''}>
             <PostCard post={post} />
-          </button>
+          </Link>
         ))}
       </div>
     </Layout>
