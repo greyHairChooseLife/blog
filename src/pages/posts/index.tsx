@@ -32,7 +32,10 @@ export const Head = () => {
 
 export const query = graphql`
   query Posts {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/write/posts/" } }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/write/posts/" } }
+      sort: { fields: [frontmatter___birth], order: DESC }
+    ) {
       edges {
         node {
           frontmatter {
