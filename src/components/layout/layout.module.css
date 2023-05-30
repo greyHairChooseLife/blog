@@ -6,11 +6,18 @@ body {
 }
 
 .layout {
-  width: 90vw;
+  width: 95vw;
+  max-width: 2000px;
   margin: auto;
 }
 
-.layout > h1 {
+.layout > header {
+  background-color: #62b270;
+  padding-bottom: 3vh;
+  margin-bottom: 5vh;
+}
+
+.layout > header > h1 {
   text-align: center;
   padding: 6vh;
 }
