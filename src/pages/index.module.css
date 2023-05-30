@@ -1,15 +1,14 @@
 .layout {
   position: relative;
-  top: 10%;
-  height: 30%;
   width: 80%;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 4vw;
+  margin-top: 20vh;
 }
 
 .layout > div {
-  border: solid 2px red;
-  padding: 20px;
+  padding: 40px;
+  background-color: #d6edda;
 }
