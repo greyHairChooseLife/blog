@@ -15,7 +15,7 @@
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
     "prepare": "husky install",
-    "deploy": "git checkout main && gatsby build && gh-pages -f -d public -b deploy"
+    "deploy": "git checkout main && gatsby build --prefix-paths && gh-pages -f -d public -b deploy"
   },
   "dependencies": {
     "gatsby": "^5.9.1",
