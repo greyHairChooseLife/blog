@@ -1,0 +1,15 @@
+.layout {
+  position: relative;
+  top: 10%;
+  height: 30%;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4vw;
+}
+
+.layout > div {
+  border: solid 2px red;
+  padding: 20px;
+}
