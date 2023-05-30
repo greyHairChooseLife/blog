@@ -14,7 +14,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "deploy": "git checkout main && gatsby build && gh-pages -f -d public -b deploy"
   },
   "dependencies": {
     "gatsby": "^5.9.1",
@@ -29,6 +30,7 @@
     "@types/react": "^18.2.5",
     "@types/react-dom": "^18.2.4",
     "gatsby-plugin-dts-css-modules": "^3.0.0",
+    "gh-pages": "^5.0.0",
     "husky": "^8.0.0",
     "typescript": "^5.0.4"
   }
