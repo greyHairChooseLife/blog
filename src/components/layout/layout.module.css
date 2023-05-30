@@ -6,9 +6,9 @@ body {
 }
 
 .layout {
-  width: 95vw;
+  width: calc(100vw - 32px);
   max-width: 2000px;
-  margin: auto;
+  margin-left: 16px;
 }
 
 .layout > header {
