@@ -12,6 +12,6 @@ export const useHeaderData = (): [{ title: string }, string] => {
       }
     `,
   );
-  const pathname = window.location.pathname.split('/')[1];
+  const pathname = typeof window !== 'undefined' ? window.location.pathname.split('/')[1] : '';
   return [site.siteMetadata, pathname];
 };
