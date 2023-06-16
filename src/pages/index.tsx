@@ -1,11 +1,8 @@
 import * as React from 'react';
-//import { useEffect } from 'react';
 import { useHeaderData } from '../lib/hooks/useHeaderData';
 import Layout from '../components/layout/layout';
-//import { navigate } from 'gatsby';
 
-const IndexPage = () => {
-  //useEffect(() => navigate(`/about_me`), []);
+const Home = () => {
   return (
     <Layout>
       <p>introduce</p>
@@ -13,6 +10,13 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default Home;
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head = () => {
+  const [{ title }, pathname] = useHeaderData();
+  return (
+    <title>
+      {title} | {pathname ? pathname : 'home'}
+    </title>
+  );
+};
