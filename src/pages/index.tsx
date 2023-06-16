@@ -1,15 +1,19 @@
 import * as React from 'react';
 import { useHeaderData } from '../lib/hooks/useHeaderData';
 import Layout from '../components/layout/layout';
-import Contact from '../components/for_pages/home/contact';
 import * as st from './index.module.css';
 
 const Home = () => {
   return (
     <Layout>
-      <div className={st.layout}>
-        <div>resume</div>
-        <Contact />
+      <div className={st.container}>
+        <p>안녕하세요, 김상연입니다.</p>
+        <p>
+          컴퓨터 프로그래밍이 제게 좋은 <strong>도구</strong>가 되길 바랍니다.
+        </p>
+        <a target="_blank" href="https://github.com/greyHairChooseLife">
+          visit github
+        </a>
       </div>
     </Layout>
   );

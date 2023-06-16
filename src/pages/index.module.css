@@ -1,14 +1,17 @@
-.layout {
-  position: relative;
-  width: 80%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 4vw;
+.container {
+  text-align: center;
+  font-size: 1.5rem;
   margin-top: 20vh;
 }
 
-.layout > div {
-  padding: 40px;
-  background-color: #d6edda;
+.container > p {
+  margin: 40px;
+}
+
+.container > a {
+  text-decoration: none;
+  color: white;
+  background-color: green;
+  padding: 5px 20px;
+  border-radius: 5px;
 }
