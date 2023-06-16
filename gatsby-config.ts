@@ -19,6 +19,13 @@ const config: GatsbyConfig = {
         path: `${__dirname}/write/posts`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `life_style`,
+        path: `${__dirname}/write/about_me/life_style`,
+      },
+    },
     `gatsby-transformer-remark`,
   ],
 };
