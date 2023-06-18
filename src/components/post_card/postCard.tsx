@@ -13,14 +13,14 @@ interface postProps {
 
 const PostCard = ({ post }: { post: postProps }) => {
   return (
-    <div className={st.card}>
+    <div className={st.container}>
       <h2>{post.frontmatter?.title}</h2>
       <p>
-        <span>작성</span>
+        <span>작성 : </span>
         {post.frontmatter?.birth}
       </p>
       <p>
-        <span>수정</span>
+        <span>수정 : </span>
         {post.frontmatter?.modified}
       </p>
       <article>

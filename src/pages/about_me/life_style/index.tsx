@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { graphql, PageProps, Link } from 'gatsby';
 import Layout from '../../../components/layout/layout';
-import PostCard from '../../../components/for_pages/posts/postCard';
+import PostCard from '../../../components/post_card/postCard';
 import { useHeaderData } from '../../../lib/hooks/useHeaderData';
 
 const LifeStyle = ({ data }: PageProps<Queries.LifeStyleQuery>) => {
