@@ -5,7 +5,7 @@ import { useHeaderData } from '../../lib/hooks/useHeaderData';
 const KnowledgeMap = () => {
   return (
     <Layout>
-      <p>knowledge map</p>
+      <p>working on it...</p>
     </Layout>
   );
 };

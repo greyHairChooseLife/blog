@@ -5,7 +5,7 @@ import { useHeaderData } from '../../lib/hooks/useHeaderData';
 const Portfolio = () => {
   return (
     <Layout>
-      <p>portfolio</p>
+      <p>working on it...</p>
     </Layout>
   );
 };
