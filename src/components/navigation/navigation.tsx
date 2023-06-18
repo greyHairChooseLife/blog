@@ -35,10 +35,12 @@ const navigation = () => {
           .map((c) => (c === '_' ? ' ' : c))
           .join('');
 
+  const currentPath = typeof window !== 'undefined' ? window.location.pathname.split('/')[1] : '';
+
   return (
     <div className={st.link_list}>
       {filteredPages.map(({ path, id }) => (
-        <Link key={id} to={path}>
+        <Link key={id} to={path} className={currentPath !== format(path) ? '' : st.currentPath}>
           {format(path)}
         </Link>
       ))}

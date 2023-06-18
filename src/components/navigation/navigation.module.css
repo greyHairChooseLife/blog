@@ -13,3 +13,9 @@
   text-decoration: none;
   color: inherit;
 }
+
+.currentPath {
+  font-size: 1.8rem;
+  text-decoration: underline !important;
+  text-underline-offset: 20px;
+}
