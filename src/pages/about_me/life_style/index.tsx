@@ -2,6 +2,7 @@ import * as React from 'react';
 import { graphql, PageProps, Link } from 'gatsby';
 import Layout from '../../../components/layout/layout';
 import PostCard from '../../../components/post_card/postCard';
+import PostCardGrid from '../../../components/post_card_grid/postCardGrid';
 import { useHeaderData } from '../../../lib/hooks/useHeaderData';
 
 const LifeStyle = ({ data }: PageProps<Queries.LifeStyleQuery>) => {
@@ -9,13 +10,13 @@ const LifeStyle = ({ data }: PageProps<Queries.LifeStyleQuery>) => {
 
   return (
     <Layout>
-      <div>
+      <PostCardGrid>
         {posts.map((post) => (
           <Link key={post.id} to={post?.frontmatter?.slug || ''}>
             <PostCard post={post} />
           </Link>
         ))}
-      </div>
+      </PostCardGrid>
     </Layout>
   );
 };

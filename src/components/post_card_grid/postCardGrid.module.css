@@ -1,0 +1,9 @@
+.container {
+  display: grid;
+  max-width: 1300px;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  row-gap: 50px;
+  justify-items: center;
+  align-items: stretch;
+}
