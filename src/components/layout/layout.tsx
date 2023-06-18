@@ -5,7 +5,7 @@ import '../../global.css';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className={st.layout}>
+    <div className={st.container}>
       <header>
         <h1>CHOOSE LIFE</h1>
         <Navigation />
