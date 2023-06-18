@@ -3,20 +3,20 @@ import { graphql, PageProps, Link } from 'gatsby';
 import { useHeaderData } from '../../lib/hooks/useHeaderData';
 import Layout from '../../components/layout/layout';
 import PostCard from '../../components/post_card/postCard';
-import * as st from './index.module.css';
+import PostCardGrid from '../../components/post_card_grid/postCardGrid';
 
 export default function Posts({ data }: PageProps<Queries.PostsQuery>) {
   const posts = data.allMarkdownRemark.edges.map(({ node }) => node);
 
   return (
     <Layout>
-      <div className={st.cardList}>
+      <PostCardGrid>
         {posts.map((post) => (
           <Link key={post.id} to={post?.frontmatter?.slug || ''}>
             <PostCard post={post} />
           </Link>
         ))}
-      </div>
+      </PostCardGrid>
     </Layout>
   );
 }
