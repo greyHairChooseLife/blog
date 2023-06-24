@@ -1,5 +1,5 @@
 ---
-title: 'gatsby로_블로그_만들기_2탄_github_pages_배포하기'
+title: 'gatsby로 블로그 만들기 2탄: github pages 배포하기'
 birth: '2023-05-30'
 modified:
 slug: '2023/05/make-gatsby-blog-2nd'

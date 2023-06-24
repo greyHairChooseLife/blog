@@ -1,5 +1,5 @@
 ---
-title: 'gatsby로_블로그_만들기_1탄_gatsby_이해하기'
+title: 'gatsby로 블로그 만들기 1탄: gatsby 이해하기'
 birth: '2023-05-29'
 modified: '2023-05-29'
 slug: '2023/05/make-gatsby-blog-1st'
