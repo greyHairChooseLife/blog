@@ -2,6 +2,7 @@
   width: calc(100vw - 32px);
   max-width: 2000px;
   margin-left: 16px;
+  margin: auto;
 }
 
 .container > header {
